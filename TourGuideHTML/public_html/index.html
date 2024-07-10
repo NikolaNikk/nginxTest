@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Guide</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Tour Guide</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link details-btn" href="#" >Sofia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link details-btn" href="#" >Paris</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link details-btn" href="#" >Belgrade</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <!-- дестинации -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/sofia1.jpg" class="card-img-top" alt="Sofia">
+          <div class="card-body">
+            <h5 class="card-title">Sofia</h5>
+            <p class="card-text">Welcome to Sofia, Bulgaria's dynamic capital! With a backdrop of stunning mountains, Sofia effortlessly blends ancient history with a modern vibe. Explore diverse architecture, from Ottoman mosques to Orthodox churches. Wander cobblestone streets in the Old Town, discover Roman ruins, and dive into lively markets. Embrace the city's rich cultural tapestry, savor local cuisine, and feel the vibrant pulse of this captivating metropolis.</p>
+            <button type="button" class="btn btn-primary details-btn" data-toggle="modal" data-target="#detailsModal" data-info="Sofia,Welcome to Sofia,42.69590715779006,23.325317400991356">Details</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/paris.jpg" class="card-img-top" alt="Paris">
+          <div class="card-body">
+            <h5 class="card-title">Paris</h5>
+            <p class="card-text">Welcome to Paris, the timeless jewel of France! This iconic city is a masterpiece of art, culture, and history. Marvel at the elegance of the Eiffel Tower and the grandeur of Notre-Dame Cathedral. Wander along the romantic Seine River, explore charming neighborhoods like Montmartre, and stroll through the enchanting gardens of the Tuileries. Indulge in world-class cuisine, from quaint bistros to Michelin-starred restaurants, and immerse yourself in the vibrant art scene at the Louvre or Musée d'Orsay. Paris is a city that weaves together beauty, history, and sophistication, inviting you to fall in love with its enchanting allure.</p>
+            <button type="button" class="btn btn-primary details-btn" data-toggle="modal" data-target="#detailsModal" data-info="Paris,Welcome to Paris,48.85814773234853,2.349435950677062">Details</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/belgrade.jpg" class="card-img-top" alt="Sofia">
+          <div class="card-body">
+            <h5 class="card-title">Belgrade</h5>
+            <p class="card-text">Welcome to Belgrade, the lively capital of Serbia! Set on the banks of the Danube and Sava rivers, this city exudes a vibrant energy and a rich historical tapestry. Explore the striking contrast between ancient fortresses like Kalemegdan, offering panoramic views, and the bustling urban life of its streets. Delve into Belgrade's diverse cultural scene, from the historic Skadarlija district's bohemian charm to the contemporary art galleries and buzzing nightlife along Strahinjića Bana street. Taste traditional Serbian cuisine in local taverns, experience the warmth of its people, and embrace the fusion of past and present in this dynamic city.</p>
+            <button type="button" class="btn btn-primary details-btn" data-toggle="modal" data-target="#detailsModal" data-info="Belgrade,Welcome to Belgrade,44.81171657602232,20.458292642428447">Details</button>
+          </div>
+        </div>
+      </div>
+      <!-- дестинации -->
+    </div>
+  </div>
+
+  <!-- Bootstrap modal for detailed destination information -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detailsModalLabel">Detailed Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="cityName"></p>
+          <p id="additionalInfo"></p>
+          <div id="gpsMap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS  jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
