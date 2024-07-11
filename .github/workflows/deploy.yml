@@ -26,5 +26,6 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << 'EOF'
           cd $REMOTE_PATH
-          sudo git pull origin main
+          ls -al
+          #sudo git pull origin main
         EOF
