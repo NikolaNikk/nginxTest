@@ -3,7 +3,7 @@ name: Deploy to Remote Server
 on:
   push:
     branches:
-      - main  # Променете това на желания от вас клон
+      - main  
 
 jobs:
   deploy:
@@ -27,5 +27,5 @@ jobs:
         ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << 'EOF'
           cd $REMOTE_PATH
           git pull origin main
-          # Добавете тук всякакви други команди за разгръщане, напр. рестартиране на услуги
+          
         EOF
