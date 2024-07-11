@@ -22,7 +22,7 @@ jobs:
       env:
         REMOTE_USER: Nikinikk
         REMOTE_HOST: 20.251.140.210
-        REMOTE_PATH: /var/www/html/nginxTest/.git
+        REMOTE_PATH: /var/www/html/nginxTest
       run: |
         ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << 'EOF'
           cd $REMOTE_PATH
