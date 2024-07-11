@@ -26,6 +26,5 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST << 'EOF'
           cd /var/www/html/nginxTest
-          ls -al
-          #sudo git pull origin main
+          sudo git pull origin main
         EOF
